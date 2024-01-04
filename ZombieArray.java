@@ -1,6 +1,8 @@
 import java.util.Random;
 import java.util.Scanner;
 import java.util.Arrays;
+import javax.swing.JOptionPane;
+
 
 /**
  * @author Wellington B
@@ -87,7 +89,7 @@ public class ZombieArray {
 			System.out.println("You chose: " + weapon[2]);
 		} else if (w.equals(weapon[3])) {
 			System.out.println("You chose: " + weapon[3]);
-		}else if (w.equals(weapon[4])) {
+		} else if (w.equals(weapon[4])) {
 			System.out.println("You chose: " + weapon[4]);
 		} else {
 			System.out.println(" You did not selected any character");
@@ -106,6 +108,7 @@ public class ZombieArray {
 
 		// This command will display which zombie the character will fight against
 		System.out.println("You will fight against the zombie: " + zomby);
+		JOptionPane.showMessageDialog(null, zomby);
 		
 
 	}
