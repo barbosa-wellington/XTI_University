@@ -1,4 +1,4 @@
-
+import java.util.Random;
 
 
 /**
@@ -39,7 +39,12 @@ public class CarRace {
 			"Mercedes-AMG One",
 		};
 
-		System.out.println(cars[0]);
+		Random r = new Random();
+
+
+		int car = r.nextInt(cars.length);
+
+		System.out.println(cars[car]);
 
 
 	}
