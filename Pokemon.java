@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.Random;
+import java.util.Scanner;
 
 /**
  * @author Wellington B
@@ -25,7 +27,11 @@ public class Pokemon {
 						"Caterpie","Metapod","Butterfree"};
 
 
-	System.out.println(pokemons[0]); 	
+	Random r = new Random();
+
+	int pokemon = r.nextInt(pokemons.length);
+
+	System.out.println(pokemons[pokemon]); 	
 
 	}
 }
