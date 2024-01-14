@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
 public class Fluxo {
 	
 	public static void main (String [] args){
@@ -71,14 +75,55 @@ public class Fluxo {
 			
 		}
 
-		*/
-
+		
 		int i = 1;
 		while (i < 10){
 			System.out.println(i);
 			i++;
 
 		}
+	
 		
+
+		Scanner sc= new Scanner(System.in);
+		ArrayList<String> products = new ArrayList<String>();
+		String product = "";
+
+		do {
+			System.out.print("Inform a product name: ");
+			product = sc.nextLine();
+
+			products.add(product);
+
+			if (product.equals("Close")){
+				products.remove(product);
+			}
+
+		} while (!"Close".equals(product));
+
+
+		for(String prod : products){
+			System.out.println(prod);
+		}
+
+		*/
+
+		Scanner sc= new Scanner(System.in);
+		System.out.println("----------This is a Fibonacci calculation----------");
+
+		int old_n = 1;
+		int next_n = 2;
+		
+		while(next_n <= 55){
+
+			next_n = next_n + old_n;
+			old_n = next_n - old_n;
+			System.out.println("fibonacci now is : " + next_n);
+
+
+		}
+
+
+
 	}
 }
