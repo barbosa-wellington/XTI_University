@@ -106,15 +106,14 @@ public class Fluxo {
 			System.out.println(prod);
 		}
 
-		*/
+		
 
-		Scanner sc= new Scanner(System.in);
 		System.out.println("----------This is a Fibonacci calculation----------");
 
-		int old_n = 1;
-		int next_n = 2;
+		int old_n = 0;
+		int next_n = 1;
 		
-		while(next_n <= 55){
+		while(next_n <= 2000){
 
 			next_n = next_n + old_n;
 			old_n = next_n - old_n;
@@ -123,7 +122,38 @@ public class Fluxo {
 
 		}
 
+		
+		break; // This command will stop the loop when the number appears.
+		continue;// this command will skip the number or validation and will continue.
 
+	
+		for(int i =0; i <10; i++){
+			if (i == 5){
+				break; // This command will stop the loop when the number appears.
+			}
+			System.out.println(i);
+		}
+
+	*/
+
+		boolean[][] matrix= 
+		{
+			{false, true, false, false, false},
+			{false, false, false, false, false}
+		};
+
+		search:
+		for(int a =0; a < matrix.length; a++){
+			System.out.print("A ");
+			for(int b= 0; b < matrix[a].length; b++){
+				if (matrix[a][b]){
+					System.out.print("TRUE");
+					break search;
+				}
+				System.out.print("B ");
+
+			}
+		}
 
 	}
 }
