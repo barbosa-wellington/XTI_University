@@ -11,7 +11,7 @@ package br.com.xti.oop;
 public class Account {
     
     String client;
-    double balance;
+    long balance;
     
     
     void showBalance(){
@@ -30,20 +30,20 @@ public class Account {
      * if the amount x withdraw, the new balance must be updated.
      *    
     *****/
-    void withdraw(double withdrawValue){
+    void withdraw(long withdrawValue){
         
         balance = balance - withdrawValue;
         //balance -= withdrawValue
         
     }
     
-    void deposit(double deposit){
+    void deposit(long deposit){
     
         balance = balance + deposit;
         // balance += deposit
     }
     
-    void transferFor(Account receiver, double transferValue){
+    void transferFor(Account receiver, long transferValue){
         
         this.withdraw(transferValue);
         receiver.deposit(transferValue);

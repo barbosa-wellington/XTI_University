@@ -17,16 +17,16 @@ public class AccountTest {
         Account dc = new Account();
         
         ac.client = "Wellington";
-        ac.balance = 11_000.00;
+        ac.balance = 11_000_00;
         ac.showBalance();
         
         
         dc.client = "Kamochanok";
-        dc.balance = 8_000.00;
+        dc.balance = 8_000_00;
         dc.showBalance();
         
         
-        ac.transferFor(dc, 400.00);
+        ac.transferFor(dc, 4_000_00);
         
         // this command will print the new account balance of Wellington
         ac.showBalance();
@@ -38,7 +38,7 @@ public class AccountTest {
         Bank_of_Australia.showBankBalance();
         
         
-        Bank_of_Australia.bankLoan(dc, 20.000);
+        Bank_of_Australia.bankLoan(dc, 20_000_00);
         Bank_of_Australia.showBankBalance();
         
         dc.showBalance();

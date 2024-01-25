@@ -12,11 +12,11 @@ public class Bank {
     
     
     String bankName;
-    double bankLoan;
-    double bankBalance;
+    long bankLoan;
+    long bankBalance;
 
     public Bank() {
-        this.bankBalance = 90_000_000;
+        this.bankBalance = 900_000000;
         this.bankName = "Bank of Australia";
     }
     
@@ -26,11 +26,11 @@ public class Bank {
     
     }
     
-    void bankLoan(Account receiver, double bankLoan){
+    void bankLoan(Account receiver, long bankLoan){
         
         bankBalance = bankBalance - bankLoan;
         receiver.deposit(bankLoan);
-         
+        System.out.println(bankName + " has approved a loan for " + receiver + " of " + bankLoan);
     }
     
     
