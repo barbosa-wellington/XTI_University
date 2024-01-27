@@ -37,4 +37,31 @@ public class Math {
        
     }
     
+    /** 
+     * @param number
+     * @param count - Variable that will count each time that an even number will be identified
+     * @param powNum - Variable that will receive the sub of the given number minus the even number.
+     * @return - this variable will return the count variable which determine the Squareroot of a given number.
+     */
+    double routeNumber(double number){
+    
+        int count = 1;
+        double powNum = number;
+        
+        for(int i = 1; i < number; i++){
+            
+            if((i % 2) == 1){
+                
+                powNum -= i;
+                count += 1;
+                
+                if(powNum < i){
+                    break;
+                    
+                }           
+            }
+        }
+      return count;
+    }
+    
 }
