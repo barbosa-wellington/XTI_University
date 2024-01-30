@@ -45,12 +45,23 @@ public class MathTest {
     double[] nu = {2,4,6,8,10};
     
     // Testing a method with multiple arguments.
-    double t = cal.sumNum(" Numbers",2,4,6,8,10);
+    //double t = cal.sumNum(" Numbers",2,4,6,8,10);
     
-        System.out.println("this is a method that return the sum of many numbers " +t);
-    double nnnnn = cal.routeNumber(17);
+    
+    
+    
+        //System.out.println("this is a method that return the sum of many numbers " +t);
+        double nnnnn = cal.routeNumber(17);
     
         System.out.println("the squareroot is: " + nnnnn);
+    
+        System.out.println(cal.average(5, 3));
+        
+        System.out.print(cal.average("50","30"));
+        
+        System.out.print(cal.average(10));
+    
+        System.out.println(cal.average(10,20,30));
     }
     
     

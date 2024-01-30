@@ -44,8 +44,9 @@ public class Math {
     // Adding more variable for a method, however
     // the java languange does not allows you to add
     // two variables.
-    double sumNum(String title, double ...numbers){
-        System.out.println("The number are: ");
+    //String title
+    double sumNum(double ...numbers){
+        //System.out.println("The number are: ");
         double total = 0;
         for(double n : numbers){
             total += n;        
@@ -78,5 +79,32 @@ public class Math {
         }
       return count;
     }
+    
+    double average(int x){
+        System.out.println("Math.average(x)");
+        return x;
+    }
+    
+    double average(int x, int j){
+        System.out.print("average (x + y)/2 ");
+        return (x + j) /2;
+    
+    }
+    
+       
+    double average(double ...numbers){
+        System.out.println("oop.Math.average([])");
+        return this.sumNum(numbers) / numbers.length;
+    }
+    
+    
+    double average(String x, String y){
+        System.out.print("average(String x, String y) ");
+        int ix = Integer.parseInt(x);
+        int iy = Integer.parseInt(y);
+        return (ix + iy) /2;
+    }
+    
+    
     
 }
