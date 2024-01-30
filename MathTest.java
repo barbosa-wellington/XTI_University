@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package br.com.xti.oop;
+package oop;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -17,6 +17,9 @@ public class MathTest {
     
     Math cal = new Math();
     
+        System.out.println(args.toString());
+    
+    System.out.println("\n");
       
     int element = cal.graterThan(10, 20);
     
@@ -38,8 +41,18 @@ public class MathTest {
     
     //System.out.println(npow);
     
+    
+    double[] nu = {2,4,6,8,10};
+    
+    // Testing a method with multiple arguments.
+    double t = cal.sumNum(" Numbers",2,4,6,8,10);
+    
+        System.out.println("this is a method that return the sum of many numbers " +t);
     double nnnnn = cal.routeNumber(17);
     
         System.out.println("the squareroot is: " + nnnnn);
     }
+    
+    
+    
 }

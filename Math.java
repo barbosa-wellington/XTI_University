@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package br.com.xti.oop;
+package oop;
 
 /**
  *
@@ -37,6 +37,21 @@ public class Math {
        
     }
     
+    
+    // This is a method that will receive many number.
+    // The same can be done by adding an double[]
+    // variable arguments
+    // Adding more variable for a method, however
+    // the java languange does not allows you to add
+    // two variables.
+    double sumNum(String title, double ...numbers){
+        System.out.println("The number are: ");
+        double total = 0;
+        for(double n : numbers){
+            total += n;        
+        }
+        return total;
+    }
     /** 
      * @param number
      * @param count - Variable that will count each time that an even number will be identified
