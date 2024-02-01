@@ -13,7 +13,7 @@ public class Car {
     String model;
     int MaxSpeed;
     double torchinSecond;
-    
+    Engine engine;
     
     // A constructor assist in the initialization of a class
     // Once a empty constructor is created
@@ -26,10 +26,20 @@ public class Car {
     }
     
     public Car(String model, int MaxSpeed, double torchinSecond){
+        //this.model = model;
+        //this.MaxSpeed = MaxSpeed;
+        //this.torchinSecond = torchinSecond;
+        
+        // This command will call the more completed constructor method to initialize this method.
+        this(model, MaxSpeed, torchinSecond, null);
+    }
+    
+    public Car(String model, int MaxSpeed, double torchinecond, Engine engin){
         this.model = model;
         this.MaxSpeed = MaxSpeed;
-        this.torchinSecond = torchinSecond;
-        
+        this.torchinSecond = torchinecond;
+        this.engine = engin;
+
     }
     
 }
