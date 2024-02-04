@@ -12,7 +12,7 @@ public class PlanetTest {
     
     public static void main(String [] args){
         
-        Planets myplanet = Planets.JUPITER;
+        Planets myplanet = Planets.MERCURY;
     
                 
         Planets.canIliveHere(myplanet);

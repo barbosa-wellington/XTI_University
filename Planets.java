@@ -10,15 +10,24 @@ package oop;
  */
 public enum Planets {
     
-    MERCURY(),
-    VENUS(), 
-    EARTH(), 
-    MARS(), 
-    JUPITER(), 
-    SATURN(), 
-    URANUS(), 
-    NEPTUNE(), 
-    PLUTO();
+    MERCURY(1),
+    VENUS(2), 
+    EARTH(3), 
+    MARS(4), 
+    JUPITER(5), 
+    SATURN(6), 
+    URANUS(7), 
+    NEPTUNE(8), 
+    PLUTO(9);
+    
+    int number;
+    
+    Planets(int number){
+        
+        this.number= number;
+    
+    
+    }
     
     
     public static void canIliveHere(Planets myplanet){
@@ -27,6 +36,7 @@ public enum Planets {
             
             case MERCURY:
                 System.out.println("This planet is really really hot.");
+                System.out.println("This is a planet " + myplanet.number);
                 break;
             case VENUS:
                 System.out.println("This planet is a little hot.");
