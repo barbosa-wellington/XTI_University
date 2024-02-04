@@ -8,6 +8,21 @@ package inheritance;
  *
  * @author wellington
  */
-public class Dog extends Animal {
+public class AnimalTest {
+    
+    
+    public static void main(String [] args){
+    
+    Dog bilu = new Dog();
+    
+    bilu.food = "beef";
+    bilu.sleep();
+    
+    Chicken carijo = new Chicken();
+    carijo.sleep();
+    
+    
+    
+    }
     
 }
