@@ -15,10 +15,18 @@ public class Dog extends Animal {
         // this constructor is already initialize with two parameters
     public Dog(){
         super(30, "Meat");
-        
-        
-        
+    }
+    
+    void makeNoise(){
+        System.out.println("barkign barking! ");
     
     }
+
+    @Override
+    void nothing() {
+        System.out.println("This method is a abstraction of doing nothing");
+    }
+    
+    
     
 }

@@ -19,6 +19,20 @@ public class Chicken extends Animal{
         super(2, "Corn");
     }
     
+    void makeNoise(){
+        System.out.println("Co Co!");
+            }
+
+    
+    // This method is an original implementation of a abstract methond from an Abstract class called Animal.
+    // by abstracting, we are adding one more layer of security on our systems and class.
+    // when an method is abstract by a super class, all extends class must implement the method by its best approaches.
+    @Override
+    void nothing() {
+                System.out.println("This method is a abstraction of doing nothing");
+
+    }
+    
     
     
     

@@ -11,12 +11,20 @@ package inheritance;
 public class AnimalTest {
     
     
+    
+    
+    
     public static void main(String [] args){
     
+        
+        
+        //Animal generic = new Animal(0, null);
     Dog bilu = new Dog();
     
     bilu.food = "beef";
     bilu.sleep();
+    
+    //generic.makeNoise();
     
     Dog hanna = new Dog();
     
@@ -41,12 +49,18 @@ public class AnimalTest {
         System.out.println(bilu.getClass());
         
         // overrive the variable food which was firstly asigned with value "meat"
-        // that the variable has a new value which is "bone"
+        // that the variable has a new value which is "bone".
         bilu.food = "bone";
         
         System.out.println(bilu.food);
         System.out.println(carijo.food);
+    
+        bilu.makeNoise();
+    
+        carijo.makeNoise();
         
+        // The generic object is the type Animal
+        //generic.makeNoise();
     }
     
 }
