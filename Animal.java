@@ -10,8 +10,16 @@ package inheritance;
  */
 public class Animal {
     
+    protected int serial;
     double weigth;
     String food;
+    
+       
+    public Animal(double weigth, String food){
+        this.weigth = weigth;
+        this.food = food;
+    }
+    
     
     void sleep(){
         System.out.println(" its sleeping.");

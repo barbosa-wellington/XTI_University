@@ -10,4 +10,15 @@ package inheritance;
  */
 public class Dog extends Animal {
     
+    // the reserved word super refere to the super class or Class Animal
+        // The constructor above is a calling from the constructor from the Animal class.
+        // this constructor is already initialize with two parameters
+    public Dog(){
+        super(30, "Meat");
+        
+        
+        
+    
+    }
+    
 }
