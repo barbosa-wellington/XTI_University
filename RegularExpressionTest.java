@@ -59,6 +59,44 @@ public class RegularExpressionTest {
     String post = "\\d\\d\\d\\d\\d-\\d\\d\\d";
     b = "74534-049".matches(post);
     
+    
+    
+    /* Quantifications
+    X{n}    X, exacly n times
+    X{n,}   X, at the least n once
+    X{n, m} X, at the least n but not more than m times
+    X?      X, 0 or 1 times
+    X*      X, 0 or + times
+    X+      X, 1 or + times
+    
+    */
+    
+    b = "21".matches("\\d{2}");
+    
+    // looking for more than 2 occurence of a digit
+    b = "123".matches("\\d{2,}");
+    
+    //Here it is check the occurence of a value whicn can start as 2 occurence or
+    // five. Any thing less than 2 or more than 5 will return false.
+    b = "123456".matches("\\d{2,5}");
+    
+    
+    b = "".matches(".?");
+    
+    b = "ab".matches(".*");
+    
+    // find one or more time the occurance
+    b= "123".matches(".+");
+    
+    
+    // Create a post of validation
+    //String post = "\\d\\d\\d\\d\\d-\\d\\d\\d";
+    b = "74534-049".matches("\\d{5}-\\d{3}");
+    
+    
+    // Creating a date validation
+    b = "10/05/1994".matches("\\d{2}.\\d{2}.\\d{4}");
+    
     System.out.println(b);
     
     }
