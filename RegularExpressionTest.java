@@ -97,6 +97,48 @@ public class RegularExpressionTest {
     // Creating a date validation
     b = "10/05/1994".matches("\\d{2}.\\d{2}.\\d{4}");
     
+    
+    /*
+    Metacharacter of front
+    ^ initiate
+    $ finalize
+    | or 
+    */
+    
+    // Validating the initial character
+    b = "Pier21".matches("^Pier.*");
+    
+    // Validating the end of the string with a number
+    b = "Pier21".matches(".*21$");
+
+    //verify if its has Java in the middle
+    b = "There is Java here".matches(".*Java.*");
+    
+    
+    // verify if the string begins with the word there,
+    // the (?i) will ignore the upper or lower case
+    b = "There is Java here".matches("(?i)^There.* here$");
+    
+    // Verify if there is a pattern like yes, no\ male or fimale
+    b = "yes".matches("yes|no");
+    
+    /**Groups
+     * 
+     * [...]            Groupers
+     * [a-z]            All letters between a to z
+     * [a-e][i-u]       Union parts
+     * [a-z&&[aeiou]]   Intersecsion
+     * [^abc]           exceptions - everythings besides [abc]
+     * [a-z&&[^m-p]]    Subtraction
+     * \x   scape literal
+     * */
+    
+    
+    b = "A".matches("[a-z]");
+    
+    b = "3".matches("[0-3]");
+    
+    
     System.out.println(b);
     
     }
