@@ -4,6 +4,9 @@
  */
 package javaO;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  *
  * @author wellington
@@ -133,14 +136,77 @@ public class RegularExpressionTest {
      * \x   scape literal
      * */
     
-    
+    // Validating anything between a to z
     b = "A".matches("[a-z]");
     
+    // Validating any thing between 0 to 3
     b = "3".matches("[0-3]");
     
+    // validating the first character of the word true upper or lower case
+    b = "True".matches("[tT]rue");
     
-    System.out.println(b);
+    b = "Yes".matches("[tT]rue|[yY]es");
     
+    // name validation
+    //Upper case first character
+    b = "yes".matches("yes|no");
+    
+    boolean name = "Wellington".matches("[A-Z][a-z]*");
+    //System.out.println(name);
+    
+    b = "olho".matches("[^abc]lho");
+    
+    
+    // email validation
+    boolean email = "test@test.com.au".matches("\\w+@\\w+\\.\\d{2,3}");
+    System.out.println(email);
+    
+    // Java will using the matches class in time rutinme while executing the code.
+    // It will apply some algorithms 
+    
+    String sweet = "Which sweet is the most SWeet of all sweeT";
+    
+    // The class Pattern will offer an use for more than thousand approaches
+    
+    // This expression will find the occurence of the word "sweet"
+    // and the loop while has an variable count that will count the number of time
+    // where this word occure as well as the forms.
+    Matcher matcherT = Pattern.compile("(?i)sweet").matcher(sweet);
+    
+    int count = 0;
+    while(matcherT.find()){
+        
+        count += 1;
+        System.out.println(matcherT.group() + " " + count);
+    }    
+    
+    /* Substitucion*/
+    
+    // Here the replaceAll method will replace the sweet to sweety as an adjective
+    String r = sweet.replaceAll("(?i)sweet", "sweety");
+    System.out.println(r);
+    
+    String rat = "O rato roeu a roupa do rei de roma";
+    r = rat.replaceAll("r[aeiou]", "XX");
+    System.out.println(r);
+    
+    
+    r = "Replace this text".replaceAll("\\s", "\t");
+    
+    String url = "www.xti.com.br/clients-2023.html";
+                    //https://www.xti.com.br/2023/clients.jsp
+                    
+   String re = "www.xti.com.br/\\w{2,}-\\d{4}.html";                 
+   b = url.matches(re);
+   
+   System.out.println(b);
+   
+   re = "(www.xti.com.br/)(\\w{2,})-(\\d{4}).html";
+   
+   System.out.println(re);
+   r = url.replaceAll(re, "https://$1/$3/$2.jsp");
+   System.out.println(r);
+   
     }
     
 }
